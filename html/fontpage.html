@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/footer.css">
+        
+</head>
+<body>
+    <script>
+        function toggleSidebar(){
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+
+        let slideIndex = 0; // 目前顯示的第一組圖片的索引
+
+        function plusSlides(n) {
+            const slidesContainer = document.querySelector('.slides-container');
+            const slideWidth = document.querySelector('.slide').clientWidth; // 單張圖片寬度
+            const totalSlides = document.querySelectorAll('.slide').length; // 總圖片數
+            const visibleSlides = 4; // 每次顯示的圖片數
+            const maxIndex = totalSlides - visibleSlides; // 最大索引
+
+            slideIndex += n;
+
+            // 確保索引在範圍內
+            if (slideIndex < 0) {
+                slideIndex = maxIndex;
+            } else if (slideIndex > maxIndex) {
+                slideIndex = 0;
+            }
+
+            slidesContainer.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+        }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const slideWidth = document.querySelector('.slide').clientWidth;
+                const slidesContainer = document.querySelector('.slides-container');
+                slidesContainer.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+            });
+    </script>
+
+    <section><div class="layer1"><img src="image/backgroung.jpg" alt="layer1"></div></section>
+
+    <div class="promotion"><h2>促銷活動</h2></div>
+        <div class="slideshow-container">
+            <div class="slides-container">
+                <div class="slide"><img src="image/photo1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="image/photo2.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="image/photo3.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="image/photo4.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="image/photo5.jpg" alt="Image 5"></div>
+            </div>
+            <button class="pre" onclick="plusSlides(-1)">❮</button>
+            <button class="next" onclick="plusSlides(1)">❯</button>
+        </div>
+    
+    <div class="purple">///</div>
+    
+
+    <article>
+        <a href="">會員服務</a>
+        <a href="">客服中心</a>
+        <a href="">購物車</a>
+        <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
+    </article>
+
+    <aside id="sidebar">
+        <ul>
+            <li class="section-divider"><a href="">首頁</a></li>
+            <li class="section-divider"><a href="">心理測驗</a></li>
+            <ul class="section-divider">
+                <li><a href="">所有商品</a></li>
+                <li>
+                    <details>
+                        <summary>組合</summary>
+                        <ul class="submenu">
+                            <li><a href="">考試專用</a></li>
+                            <li><a href="">上班好物</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="">促銷活動</a></li>
+                <li>
+                    <details>
+                        <summary>最新活動</summary>
+                        <ul class="submenu">
+                            <li><a href="">HUNTERxHUNTER</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="">其他商品</a></li> 
+            </ul>
+        </ul>     
+    </aside>
+</body>
+</html>

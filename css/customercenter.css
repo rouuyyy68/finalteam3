@@ -1,0 +1,141 @@
+body {
+    font-family:"Noto Serif TC", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    background-color: #80789F;
+    padding: 10px 20px;
+    justify-content: center;
+}
+
+.nav-item {
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ccc;
+    margin-left: 360px;
+}
+
+.nav-item.active {
+    color: #fff;
+    border-bottom: 2px solid #493d69;
+}
+
+.page {
+    max-width: 1200px;
+    display: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+
+}
+
+.secondpage {
+    border: 5px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+
+.page.active {
+    display: block;
+}
+
+.history {
+    background-color: #d8d8e2;
+    border-radius: 10px;
+    margin: 0 0 30px 0;
+}
+
+.history img {
+    height: 180px;
+    width: auto;
+    margin: 0 20px 0 20px;
+}
+
+.history h2 {
+    padding: 10px;
+
+}
+
+.history h3 {
+    color: #523B73;
+    padding: 0 20px 0 20px;
+}
+
+.history p {
+    padding: 20px;
+}
+
+.comment {
+    background-color: #d8d8e2;
+    border-radius: 5px;
+    margin: 0 0 30px 0;
+    padding: 15px;
+}
+
+.reply {
+    border: 1px solid #493d69;
+    background-color: #80789F;
+    color: #ffffff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.basicalinfro input {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.highlight {
+    color: #523B73;
+    font-weight: bolder;
+    margin-left: 8px;
+
+}
+
+.progress-container {
+    width: 300px;
+    height: 10px; 
+    background-color: #B8B8C0; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 86%; 
+    height: 100%; 
+    background-color: #80789F;
+    border-radius: 10px 0 0 10px;
+}
+
+.row {
+    display: flex;
+    align-items: baseline; 
+    margin-bottom: 5px; 
+}
+
+.amount {
+    min-width: 180px; 
+}
+
+.content a {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    color: #493d69;
+    text-decoration:none;
+}

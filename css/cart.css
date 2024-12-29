@@ -1,0 +1,312 @@
+body{
+    background-color: #c3b5cf;
+}
+
+nav {
+    background-color: white;
+    margin: 0px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 1500px;
+    border-radius: 0px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+}
+
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none; /*移除點標記*/
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 8px 0;
+}
+
+.submenu {
+    margin-left: 20px;
+    display: none;
+}
+
+.submenu li {
+    margin-bottom: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, .hamburger-menu:hover, .go input:hover, .back:hover{
+    color: #775fb1;
+    cursor: pointer;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /*預設隱藏在左邊*/
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    transition: left 0.3s ease;
+    padding-top: 20px;
+    z-index: 100;
+}
+
+#sidebar.active {
+    left: 0; /*點擊後顯示側邊欄*/
+}
+
+.section-divider {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease; /*滑鼠懸停效果*/
+    margin-bottom: 10px;
+}
+
+.section-divider:hover {
+    background-color: #e0e0e0; /*懸停時改變背景色*/
+}
+
+details {
+    margin-bottom: 10px;
+}
+
+details summary {
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+details[open] summary {
+    font-weight: bold; /*展開時加粗*/
+}
+
+details[open] .submenu {
+    display: block;
+    padding-left: 20px; /*增加子選單的左邊距*/
+}
+
+.progress-bar{
+    position: relative;
+    top:100px;
+    left: 35%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    color: #333;
+    font-weight: bold;
+}
+
+.step p{
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    font-weight: 100%;
+    white-space: nowrap;
+}
+
+.line {
+    position: relative;
+    top:-20px;
+    align-self: center;
+    width: 150px;
+    height: 2px;
+    background-color: #ddd;
+    margin: 0 3px;
+  }
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-items{
+    position: relative;
+    top:80px;
+
+    background-color: white;
+    margin: 40px;
+    border: gray 2px solid;
+}
+
+.tablename{
+    display: flex;
+    background-color: #adbde4;
+    padding: 15px;
+}
+
+.table-header {
+    display: flex;
+    margin: 0px;
+    padding: 15px;
+    color: #555;
+}
+
+.table-header .header1 {
+    flex: 15;
+}
+
+.table-header .header2 {
+    flex: 10;
+}
+
+.table-header .header3 {
+    flex: 10;
+}
+
+.table-header .header4 {
+    flex: 5;
+}
+
+.hr {
+    background-color: #ccc;
+    height: 2px;
+    width: 10px;
+}
+
+.item {
+    display: flex;
+    margin: 0px;
+    padding:15px;
+    align-items: center;
+}
+
+.item .price{
+    flex: 10px;
+    margin-left: 225px;
+}
+
+.item .number{
+    flex:10px;
+    padding-left: 85px;
+}
+
+.number input {
+    background-color: #e8eaef;
+    width: 100px;
+    height: 20px;
+}
+
+.item .total{
+    flex:5px;
+    margin-left: 120px;
+}
+
+.pic1{
+    width: 120px;
+    height: auto;
+}
+
+.pic2{
+    width: 120px;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.order{
+    position: relative;
+    width: 50%;
+    top:70px;
+    margin: 40px;
+    border: gray 2px solid;
+    background-color: white;
+}
+
+.much{
+    margin: 0px;
+    padding:5px 0px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.back{
+    display: flex;
+    align-items: center;
+    height: 600px;
+}
+
+#shareButton {
+    position: relative;
+    width: 30px;
+    height: 30px; 
+    text-align: center;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(127, 120, 185, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.shareButton:hover {
+    cursor: pointer;
+    color: #5a2acb;
+}
+
+#shareButton:hover .tooltip {
+    display: block;
+}
+
+#shareButton:hover {
+    cursor: pointer;
+}
+
+.go {
+    text-align: center;
+}
+
+.go input[type="submit"] {
+    background-color: #775fb1;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go input[type="submit"]:hover {
+    background-color: #5c48a1;
+    transform: scale(1.05); /*按鈕放大效果*/
+}
+

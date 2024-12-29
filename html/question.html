@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常見問題</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .faq-container h1 {
+            text-align: center;
+            color: #444;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+        .faq-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .faq-question {
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #505050;
+            cursor: pointer;
+            position: relative;
+        }
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 1.2rem;
+            transition: transform 0.2s ease;
+        }
+        .faq-item.open .faq-question::after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            display: none;
+            padding: 15px 20px;
+            border-top: 1px solid #ddd;
+            font-size: 1rem;
+            color: #555;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h1>常見問題</h1>
+        <div class="faq-item">
+            <div class="faq-question">Q：你們的商品可以寄到哪些地區？</div>
+            <div class="faq-answer">A：我們提供全球配送服務，有填寫正確地址都可以送達。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 什麼是大法師配送？</div>
+            <div class="faq-answer">A: 大法師配送是由大法師運用強大魔法將商品直接送到您手中，商品將準時且安全地送達。若商品是無形的，大法師會將能量傳送至您的意識中。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 什麼是夢境配送？</div>
+            <div class="faq-answer">A: 小精靈會透過「夢境召喚」將商品送入買家的夢中。商品以幻象的形式出現，在夢境中，買家可以直接「領取」商品，並在醒來後感受到商品的能力或效果。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 訂單需要多久處理？</div>
+            <div class="faq-answer">A: 一般訂單會在1-2個工作日內處理，繁忙時期可能會稍有延遲。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 我可以退換商品嗎？</div>
+            <div class="faq-answer">A: 若在7日內使用商品時沒有造成他人影響或謀取自身利益及危害社會秩序等，即可無條件退貨。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 付款方式有哪些？</div>
+            <div class="faq-answer">A: 我們僅接受信用卡及LinePay付款。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 使用超能力是否有安全風險？</div>
+            <div class="faq-answer">A: 是的，某些超能力可能有潛在的安全風險，尤其是高強度或涉及操控自然元素的能力（例如火焰或電流），請務必將人身安全擺第一位。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 我能永久擁有購買的超能力嗎？</div>
+            <div class="faq-answer">A: 是的，我們不會收回買家的使用權，但有些有數量限制的商品，即用完就無法繼續使用。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 如果我無法控制能力會怎麼辦？</div>
+            <div class="faq-answer">A: 初次使用者可能需要時間適應，盡量以漸進的方式使用能力，若出現任何異常，請立即聯繫我們。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 如果能力導致意外，我可以退貨嗎？</div>
+            <div class="faq-answer">A: 若證明是產品缺陷造成的意外，我們提供全額退款或更換產品。但因使用者操作不當導致的問題，將不予退款。</div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-answer').style.display = 'none'; //隱藏其他答案
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                    answer.style.display = 'block'; //顯示要看的答案
+                }
+            });
+        });
+    </script>
+</body>
+</html>

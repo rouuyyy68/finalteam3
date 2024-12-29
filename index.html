@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期末專題-第五組</title>
+    <!-- <link rel="stylesheet" href="css/style.css">  -->
+    <!-- <link rel="stylesheet" href="css/fronpage.css"> -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/goodsinfro.css"> 
+    <link rel="stylesheet" href="css/footer.css">
+     
+</head>
+<body> 
+    <div class="shell">
+            <div class="top">
+                <div class="topimg"></div>
+            </div>
+            <div class="fpmain">
+                <div class="magic-stage-container">
+                    <h2 class="magic-stage-title">Magic Stage</h2>
+                    <h4 class="magic-stage-subtitle">
+                        <span>將動畫中的奇幻世界與現實結合，找到適合自己的超能力，激發無限潛能</span>
+                    </h4>
+                </div>            
+                <img src="images/backgroung.jpg" alt="">
+            </div>
+    </div>
+
+    <header>    
+        <div class="wrap header-box">
+            <div class="logo">
+                <a href=""><img src="images/logo.jpg" alt="logo"></a>
+            </div>
+            <div class="header-right">
+                <div class="search">
+                    <div class="searech-m">
+                        <div class="search_logo"></div>
+                        <div class="form">
+                            <input type="text" class="keyword" placeholder="請輸入搜尋關鍵字">
+                            <button><img src="images/搜尋.png" alt="搜尋"></button>
+                        </button>
+                            <div class="searchblew"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <a href="html/customercenter.html" target="_blank">會員中心</a>
+            <a href="html/psyTestHP.html">心理測驗</a>
+            <a href="html/cart.html">購物車</a>       
+            <button class="btnLogin-popup">登入</button>
+            <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
+        </nav>
+    </header>
+
+    <div class="promotion"><h3>促銷活動</h3></div>
+    <div class="slideshow-container">
+        <div class="slides-container">
+            <div class="slide">
+                <a href="">
+                    <img src="images/goods-img/xmen/laser/laser1.jpg" alt="Image 1" class="promotion-img">
+                    <div class="overlay-text top-left">單筆千萬送</div>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="">
+                    <img src="images/goods-img/hunter/chain/chain1.jpg" alt="Image 2" class="promotion-img">
+                    <div class="overlay-text top-left">促銷商品享免運</div>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="">
+                    <img src="images/goods-img/deathNote/deathNote1.jpg" alt="Image 3" class="promotion-img">
+                    <div class="overlay-text top-left">買一送一</div>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="">
+                    <img src="images/goods-img/hunter/180loveSlave/180loveSlave1.png" alt="Image 4" class="promotion-img">
+                    <div class="overlay-text top-left">用過都說讚</div>
+                </a>
+            </div>
+            <div class="slide">
+                <a href=""><img src="images/goods-img/myHeroAcademic/blasting/blasting1.png" alt="Image 5" class="promotion-img"></a>
+            </div>
+        </div>
+        <button class="pre" onclick="plusSlides(-1)">❮</button>
+        <button class="next" onclick="plusSlides(1)">❯</button>
+    </div>
+
+    <div class="purple">///</div> 
+
+        <aside id="sidebar">
+            <ul>
+                <li class="section-divider"><a href="index.html">首頁</a></li>
+                <li class="section-divider"><a href="html/psyTestHP.html">心理測驗</a></li>
+                <ul class="section-divider">
+                    <li>
+                        <details>
+                            <summary>所有商品</summary>
+                            <ul class="submenu">
+                                <li><a href="#hunter">HUNTERxHUNTER</a></li>
+                                <li><a href="#mymy">我的英雄學院</a></li>
+                                <li><a href="#hero">X戰警</a></li>
+                                <li><a href="#x">其他商品</a></li> 
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>最新活動</summary>
+                            <ul class="submenu">
+                                <li><a href="#hunter">HUNTERxHUNTER</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </ul>    
+        </aside>
+    </header>
+
+    <!--會員登入-->
+    <div class="wrapper">
+        <span class="close"><img src="images/X.png"></span>
+
+        <div class="form-box login">
+            <h2>Log In</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="loginicon"><img src="images/人頭.png"></span>
+                    <input type="text" name="username" required>
+                    <label>帳號 | UserName</label> 
+                </div> 
+                
+                <div class="input-box">
+                    <span class="loginicon"><img src="images/lock_close.png"></span>
+                    <input type="password" name="password" required>
+                    <label>密碼 | PassWord</label> 
+                </div>
+                
+                <div class="forget">
+                    <label><input type="checkbox">記住我</label>
+                    <a href="#">忘記帳號密碼</a>
+                </div>
+                <button type="submit" class="login-button"><strong>登入</strong></button>
+                <div class="register">還未註冊 | <a href="#" class="register-link">點此註冊</a></div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form id="registerForm" action="register.jsp" method="post" novalidate>
+                <div class="input-box">
+                    <span class="loginicon"><img src="images/人頭.png"></span>
+                    <input type="text" name="username" id="username" required>
+                    <label for="username">帳號 | UserName</label> 
+                </div>
+
+                <div class="input-box">
+                    <span class="loginicon"><img src="images/email.png"></span>
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">電子郵件 | E-mail</label> 
+                </div> 
+                
+                <div class="input-box">
+                    <span class="loginicon"><img src="images/lock_close.png"></span>
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">密碼 | PassWord</label> 
+                </div>
+            
+                <div class="forget">
+                    <label><input type="checkbox">我同意網站規範</label>
+                </div>
+                <button type="submit" class="login-button"><strong>註冊</strong></button>
+                <div class="register">已經有帳號 | <a href="#" class="login-link">點此登入</a></div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <h2 class="allgoods" id="hunter">HUNTERxHUNTER</h2>
+    <section class="totalgoods">
+        <div class="goods">
+            <a href="#" onclick="openInfro(0); return false;" id="hunter"> 
+                <img src="images/goods-img/hunter/angel'sAutomaticNotes/angel'sAutomaticNotes1.jpg">
+                <p>天使的自動筆記</p>
+                <p>$60,000</p>
+            </a>
+        </div>  
+        <div class="goods">
+            <a href="#" onclick="openInfro(1); return false;">
+                <img src="images/goods-img/hunter/carryingTheFate/carryingTheFate1.png">
+                <p>攜帶他人的命運</p>
+                <p>$40,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(2); return false;">
+                <img src="images/goods-img/hunter/chain/chain1.jpg">
+                <p>鎖鏈</p>
+                <p>$30,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(3); return false;">
+                <img src="images/goods-img/hunter/conceptSuture/conceptSuture1.png">
+                <p>念系縫合</p>
+                <p>$60,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(4); return false;">
+                <img src="images/goods-img/hunter/crazyClown/crazyClown1.png">
+                <p>瘋狂小丑</p>
+                <p>$38,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(5); return false;">
+                <img src="images/goods-img/hunter/darkGhostGoddess/darkGhostGoddess.jpg">
+                <p>暗黑鬼婦神</p>
+                <p>$8,000</p>
+            </a>
+        </div>
+        
+        <div class="goods">
+            <a href="#" onclick="openInfro(6); return false;">
+                <img src="images/goods-img/hunter/doppelganger/doppelganger1.jpg">
+                <p>分身</p>
+                <p>$6,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(7); return false;">
+                <img src="images/goods-img/hunter/flexiblaeLove/flexiblaeLove1.jpg">
+                <p>伸縮自在的愛</p>
+                <p>$30,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(8); return false;">
+                <img src="images/goods-img/hunter/fourDimensionsApartment/fourDimensionsApartment1.jpg">
+                <p>四次元公寓</p>
+                <p>$180,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(9); return false;">
+                <img src="images/goods-img/hunter/frivolousIllusion/frivolousIllusion1.jpg">
+                <p>輕薄的假象</p>
+                <p>$25,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(10); return false;">
+                <img src="images/goods-img/hunter/god'sAlibi/god'sAlibi1.jpg">
+                <p>神的不在場證明&神的共犯</p>
+                <p>$34,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(11); return false;">
+                <img src="images/goods-img/hunter/god'sLeftHand/god'sLeftHand1.png">
+                <p>神的左手惡魔的右手</p>
+                <p>$25,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(12); return false;">
+                <img src="images/goods-img/hunter/lonelyDeepSeaFish/lonelyDeepSeaFish1.png">
+                <p>寂寞深海魚</p>
+                <p>$40,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(13); return false;">
+                <img src="images/goods-img/hunter/magicBeautician/magicBeautician1.png">
+                <p>魔法美容師</p>
+                <p>$15,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(14); return false;">
+                <img src="images/goods-img/hunter/melody/melody1.png">
+                <p>旋律</p>
+                <p>$6,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(15); return false;">
+                <img src="images/goods-img/hunter/mora/mora1.jpg">
+                <p>猜猜拳</p>
+                <p>$12,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(16); return false;">
+                <img src="images/goods-img/hunter/popeyeFish/popeyeFish1.png">
+                <p>凸眼魚</p>
+                <p>$70,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(17); return false;">
+                <img src="images/goods-img/hunter/purpleSmoke/purpleSmoke1.jpg">
+                <p>紫煙機兵隊</p>
+                <p>$35,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(18); return false;">
+                <img src="images/goods-img/hunter/readMemory/readMemory1.jpg">
+                <p>讀取記憶&記憶念彈</p>
+                <p>$50,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(19); return false;">
+                <img src="images/goods-img/hunter/returnToHeaven/returnToHeaven1.png">
+                <p>迴天</p>
+                <p>$32,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(20); return false;">
+                <img src="images/goods-img/hunter/scalePowder/scalePowder1.jpg">
+                <p>麟粉乃愛泉</p>
+                <p>$80,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(21); return false;">
+                <img src="images/goods-img/hunter/superDestoryingFist/superDestoryingFist1.png">
+                <p>超破壞拳</p>
+                <p>$35,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(22); return false;">
+                <img src="images/goods-img/hunter/superFast/superFast1.jpg">
+                <p>神速</p>
+                <p>$18,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(23); return false;">
+                <img src="images/goods-img/hunter/theSkyDoesNotKnow/theSkyDoesNotKnow1.jpg">
+                <p>天上不知唯我獨損</p>
+                <p>$60,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(24); return false;">
+                <img src="images/goods-img/hunter/thief's/thief's1.jpg">
+                <p>盜賊的極意</p>
+                <p>$300,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(25); return false;">
+                <img src="images/goods-img/hunter/toyRepairer/toyRepairer1.jpg">
+                <p>玩具修理者</p>
+                <p>$250,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(26); return false;">
+                <img src="images/goods-img/hunter/transferStudents/transferStudents.png">
+                <p>轉校生</p>
+                <p>$30,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(27); return false;">
+                <img src="images/goods-img/hunter/twoHanded/twoHanded1.png">
+                <p>雙手機關槍</p>
+                <p>$50,000</p>
+            </a>
+        </div>
+        <div class="goods" id="mymy">
+            <a href="#" onclick="openInfro(28); return false;">
+                <img src="images/goods-img/hunter/180loveSlave/180loveSlave1.png">
+                <p>180分的戀愛奴隷</p>
+                <p>$60,000</p>
+            </a>
+        </div>
+    </section>
+    
+    <h2 class="allgoods" id="hero">我的英雄學院</h2>
+    <section class="totalgoods">
+        <div class="goods">
+            <a href="#" onclick="openInfro(29); return false;">
+                <img src="images/goods-img/myHeroAcademic/blasting/blasting1.png">
+                <p>爆破</p>
+                <p>$40,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(30); return false;">
+                <img src="images/goods-img/myHeroAcademic/halfColdHalfBurning/halfColdHalfBurning1.png">
+                <p>半冷半燃</p>
+                <p>$45,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(31); return false;">
+                <img src="images/goods-img/myHeroAcademic/zeroG/zeroG1.png">
+                <p>零重力</p>
+                <p>$60,000</p>
+            </a>
+        </div>
+    </section>
+
+    <h2 class="allgoods">X戰警</h2>
+    <section class="totalgoods" id="x">
+        <div class="goods">
+            <a href="#" onclick="openInfro(32); return false;">
+                <img src="images/goods-img/xmen/laser/laser1.jpg">
+                <p>雷射</p>
+                <p>$50,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(33); return false;">
+                <img src="images/goods-img/xmen/steel/steel1.png">
+                <p>鋼鐵化</p>
+                <p>$55,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(34); return false;">
+                <img src="images/goods-img/xmen/telepathy/telepathy1.jpg">
+                <p>心電感應</p>
+                <p>$80,000</p>
+            </a>
+        </div>
+    </section>
+    <h2 class="allgoods">其他商品</h2>
+    <section class="totalgoods">
+        <div class="goods">
+            <a href="#" onclick="openInfro(35); return false;">
+                <img src="images/goods-img/TeacherSha/ultraFast1.png">
+                <p>超高速移動</p>
+                <p>$20,000</p>
+            </a>
+        </div>
+        <div class="goods">
+            <a href="#" onclick="openInfro(36); return false;">
+                <img src="images/goods-img/deathNote/deathNote1.jpg">
+                <p>催眠筆記本</p>
+                <p>$300,000</p>
+            </a>
+        </div>
+    </section>
+
+    <div id="Infro" class="Infro">
+        <div class="Infro-content">
+            <span class="close" onclick="closeInfro()">&times;</span>
+            <div class="Infro-body">
+                <article class="totalimg">
+                    <div class="bigimg"><img id="bigimg" src="" alt="商品圖片"></div>
+                    <div class="smallimg" id="smallimg" alt="縮略圖"></div>
+                </article>
+                <article class="rightinfro">
+                    <h2 id="title"></h2>
+                    <p class="price" id="price"></p>
+                    <label>數量</label>
+                    <div class="amount">
+                        <a href="#" class="reduce" onclick="decreaseQuantity(); return false;">-</a>
+                        <input type="text" id="quantity" class="number" value="1">
+                        <a href="#" class="add" onclick="increaseQuantity(); return false;">+</a>
+                    </div>
+                    <button class="addcar">加入購物車</button>
+                </article>
+            </div>
+            <section class="alltab">
+                <button class="tab active" onclick="showTab('description')">商品描述</button>
+                <button class="tab" onclick="showTab('reviews')">顧客評價</button>
+                <button class="tab" onclick="showTab('shipping')">送貨及付款方式</button>
+            </section>
+            <section id="description" class="tab-content active"></section>
+            <section id="reviews" class="tab-content"></section>
+            <section id="shipping" class="tab-content"></section>
+        </div>
+    </div>
+  
+    <script src="js/frontpage.js"></script>
+    <script src="js/lr.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/aside.js"></script>
+    <script src="js/gooddsinfro.js"></script>
+    <script src="js/amount.js"></script>
+
+    <footer>
+        <a href="html/aboutTeam.html">關於我們</a>
+        <a href="html/aboutMS.html">關於Magic Stage</a>
+        <a href="html/question.html">常見問題</a>
+    </footer>
+</body>
+</html>

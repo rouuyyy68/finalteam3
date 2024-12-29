@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於Magic Stage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e6e1e6;
+            color: #333;
+        }
+        .about-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .about-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .about-header h1 {
+            font-size: 3rem;
+            color: #4d1764;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .about-header p {
+            font-size: 20px;
+            color: #777;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 35px;
+            color: #4d1764;
+            margin: 50px 0 20px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            align-items: center;
+        }
+        .about-text {
+            width: 50%;
+            padding: 30px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .about-text h2 {
+            font-size: 25px;
+            color: #494949;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .about-text p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            width: 45%;
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease-in-out;
+        }
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /*slogan*/
+        .slogan {
+            text-align: center;
+            font-size: 20px;
+            color: #763592;
+            margin-top: 80px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 80px;
+        }
+
+        /* Carousel */
+        .carousel-container {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 1s ease-in-out;
+            width: 100%;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /*箭頭*/
+        .arrow {
+            position: absolute;
+            top: 50%;
+
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="about-container">
+        <div class="about-header">
+            <h1>關於 Magic Stage</h1>
+            <p>探索無限可能，開啟屬於你的超能力世界</p>
+        </div>
+
+        <!-- 品牌理念 Section -->
+        <div class="section-title">品牌理念</div>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>自由發揮，無限潛能</h2>
+                <p>我們深信每個人都有無限的潛能等待被發掘。我們的品牌理念是創造一個自由的舞台，讓每位顧客能夠在這裡表現出最真實的自我，發揮他們隱藏的超能力或是探索能力，無論你是初學者還是高手，都能在這個平台上不斷挑戰極限，發現與掌控屬於你的獨特力量。我們的使命是讓每個人都能在這個舞台上自由翱翔，突破自我，成就更多。</p>
+            </div>
+            <div class="about-image">
+                <img src="../images/aboutMS..jpg" alt="品牌理念圖片" />
+            </div>
+        </div>
+
+        <div class="section-title">品牌故事</div>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>從夢想到現實</h2>
+                <p>Magic Stage 的創辦人由三位熱愛動漫的夥伴組成，我們從動漫中的超能力汲取靈感，並將其轉化為現實中的產品。我們相信每個人都有潛力擁有超越現實的力量，就像動漫中的角色一樣。通過我們的平台，您可以探索和展現自己的潛能，發揮獨特的超能力，創造屬於自己的奇蹟世界。我們的使命是提供一個自由發揮的舞台，讓每個人都能成為自己的英雄。</p>
+            </div>
+            <div class="about-image carousel-container">
+                <div class="carousel-images">
+                    <img src="../images/hero.png" alt="我英">
+                    <img src="../images/giant.jpg" alt="進巨">
+                    <img src="../images/hunter.png" alt="獵人">
+                    <img src="../images/jujutsuKaisen.jpg" alt="咒術">
+                    <img src="../images/death.jpg" alt="死亡筆記本">
+                </div>
+                <div class="arrow arrow-left" onclick="moveCarousel(-1)">&#10094;</div>
+                <div class="arrow arrow-right" onclick="moveCarousel(1)">&#10095;</div>
+            </div>
+        </div>
+
+        <!-- 我們的使命與願景 Section -->
+        <div class="section-title">我們的使命與願景</div>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>突破自我，實現夢想</h2>
+                <p>我們的使命是提供一個突破自我界限的平台，讓每個人都能在這裡找到屬於自己的超能力，挑戰未知，開創未來。Magic Stage 的願景是成為全球領先的超能力商品商店，讓每個人都能在這個舞台上自信地展現出最真實的自己。</p>
+            </div>
+        </div>
+
+        <!-- Slogan -->
+        <div class="slogan">
+            <p>"解鎖潛能 超越極限"</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p></p>
+    </div>
+
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        let currentIndex = 0;
+        const totalImages = document.querySelectorAll('.carousel-images img').length;
+        
+        function updateCarousel() {
+            carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        
+        function moveCarousel(direction) {
+            currentIndex = (currentIndex + direction + totalImages) % totalImages; // Update index based on direction
+            updateCarousel();
+        }
+    </script>
+</body>
+</html>
+

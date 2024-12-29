@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/aside.css">
+
+    
+</head>
+<body>
+    <script>
+        function toggleSidebar(){
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function shareCart(){
+            var shareButton=document.getElementById('shareButton');
+            var message=document.getElementById('message');
+            var pageUrl = window.location.href;
+            
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(pageUrl);
+                alert("已複製當前網址，快去分享給朋友吧!!");
+            } else{
+                alert("發生錯誤，請手動複製網址!")
+            }
+        }
+    </script>
+
+    <nav>
+        <a href="../html/customercenter.html" target="_blank">會員中心</a>
+        <a href="../html/psyTestHP.html">心理測驗</a>
+        <a href="../html/cart.html">購物車</a>       
+        <button class="btnLogin-popup">登入</button>
+        <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
+    </nav>
+
+    <div class="progress-bar">
+        <div class="step">
+            <div class="circle">1</div>
+            <p>購物車</p>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+            <div class="circle">2</div>
+            <p>填寫資料</p>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+            <div class="circle">3</div>
+            <p>訂單確認</p>
+        </div>
+    </div>
+
+    <section  class="cart-items">
+        <div class="tablename">
+            購物車&nbsp;【2件】&nbsp;
+            <div id="shareButton" onclick="shareCart()">
+                ➥
+                <span class="tooltip">分享購物車</span>
+            </div>
+        </div>
+        <div class="table-header">
+            <div class="header1">商品資料</div>
+            <div class="header2">單件價格</div>
+            <div class="header3">數量</div>
+            <div class="header4">小計</div>
+        </div>
+        <hr>
+        <div class="item">
+            <img src="../images/念系縫合1.png" class="pic1">&nbsp;&nbsp;&nbsp;念系縫合
+            <div class="price">NT$70,000</div>
+            <form method="post" class="number">
+                <input type="number" value="2" step="1" min="1">
+            </form>
+            <div class="total">NT$140,000</div>
+        </div>
+        <hr>
+        <div class="item">
+            <img src="../images/心電感應1.jpg" class="pic2">&nbsp;&nbsp;&nbsp;心電感應
+            <div class="price">NT$60,000</div>
+            <form method="post" class="number">
+                <input type="number" value="1" step="1" min="1">
+            </form>
+            <div class="total">NT$60,000</div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="order">
+            <div class="tablename">訂單資訊</div>
+            <div class="much">
+                <p>合計:&nbsp;NT$200,000</p>
+                <p>運費:&nbsp;免運</p>
+                <hr>
+                <form method="post" action="../html/information.html" class="go">
+                    <input type="submit" value="結帳去!!"/>
+                </form>
+            </div>
+        </section>
+        <div class="back"><a href="../index.html">＜回首頁</a></div>
+    </div>
+
+    <aside id="sidebar">
+        <ul>
+            <li class="section-divider"><a href="">首頁</a></li>
+            <li class="section-divider"><a href="../html/psyTestHP.html">心理測驗</a></li>
+            <ul class="section-divider">
+                <li>
+                    <details>
+                        <summary>所有商品</summary>
+                        <ul class="submenu">
+                            <li><a href="#hunter">HUNTERxHUNTER</a></li>
+                            <li><a href="#mymy">我的英雄學院</a></li>
+                            <li><a href="#hero">X戰警</a></li>
+                            <li><a href="#x">其他商品</a></li> 
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>最新活動</summary>
+                        <ul class="submenu">
+                            <li><a href="#hunter">HUNTERxHUNTER</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </ul>    
+    </aside>
+</body>
+</html>

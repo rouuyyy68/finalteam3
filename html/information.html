@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/information.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aside.css">
+
+</head>
+<body>
+    <script>
+        function toggleSidebar(){
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+    <nav>
+        <a href="../html/customercenter.html" target="_blank">會員中心</a>
+        <a href="../html/psyTestHP.html">心理測驗</a>
+        <a href="../html/cart.html">購物車</a>       
+        <button class="btnLogin-popup">登入</button>
+        <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
+    </nav>
+
+    <div class="progress-bar">
+        <div class="step">
+            <div class="circle">1</div>
+            <p>購物車</p>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+            <div class="circle">2</div>
+            <p>填寫資料</p>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+            <div class="circle">3</div>
+            <p>訂單確認</p>
+        </div>
+    </div>
+
+    <div class="intotal">
+        <p>合計NT$200,000</p>
+        <p>購物車&nbsp;【2件】</p>
+    </div>
+
+    <div class="container">
+        <div class="item1">
+            <div class="customerinfor">
+                <div class="tablename">顧客資料</div>
+                <div class="check">
+                    <input type="checkbox" name="isSame" value="yes" checked/>收件資料與顧客資料相同
+                </div><hr>
+                <div>
+                    <p>收件人名稱:</p>
+                    <input type="text" name="recipient" value="里維‧阿卡曼" size="10" maxlength="10" />
+                </div>
+                <div>
+                    <p>收件人電話:</p>
+                    <input type="tel" placeholder="0912 111 555" name="phone">
+                </div>
+            </div>
+        </div>
+
+        <div class="item2">
+            <div class="payinfor">
+                <div class="tablename">付款資料</div>
+                <div>
+                    <p>選擇付款方式:</p>
+                    <select size="1" name="payMethod">
+                        <option>LinePay</option>
+                        <option>信用卡</option>
+                    </select>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" placeholder="卡號" name="recipient" size="10" maxlength="20" />
+                    </div>
+                    <div>
+                        <input type="text" placeholder="持卡人姓名" name="name" size="10" maxlength="20" />
+                    </div>
+                    <div>
+                        <input type="text" placeholder="有效日期(MM/YY)" name="date" size="10" maxlength="40" />
+                    </div>
+                    <div>
+                        <input type="text" placeholder="安全碼" name="sPassword" size="10" maxlength="3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item3">
+            <div class="addressinfor">
+                <div class="tablename">送貨資料</div>
+                <div>
+                    <select size="1" name="shippingWay">
+                        <option>大法師配送</option>
+                        <option>夢境配送</option>
+                    </select>
+                    <p>填寫地址:&nbsp;</p>
+                    <input type="textarea" placeholder="地址" name="address">
+                </div>
+            </div>
+        </div>
+
+        <div class="item4">
+            <div class="remarks">
+                <div class="tablename">訂單備註</div>
+                <textarea placeholder="訂單備註" name="remarks" cols="100" rows="5"></textarea>
+            </div>
+        </div>
+        <div class="back"><a href="../html/cart.html">＜返回購物車</a></div>
+
+        <div class="item5">
+            <div class="check">
+                <input type="checkbox" name="agree" value="agree"/>我同意本次付款資訊
+            </div>
+            <form method="post" action="../html/submitOrder.html" class="submit">
+                <input type="submit" value="提交訂單"/>
+            </form>
+        </div>
+    </div>
+
+
+    <aside id="sidebar">
+        <ul>
+            <li class="section-divider"><a href="index.html">首頁</a></li>
+            <li class="section-divider"><a href="html/psyTestHP.html">心理測驗</a></li>
+            <ul class="section-divider">
+                <li>
+                    <details>
+                        <summary>所有商品</summary>
+                        <ul class="submenu">
+                            <li><a href="#hunter">HUNTERxHUNTER</a></li>
+                            <li><a href="#mymy">我的英雄學院</a></li>
+                            <li><a href="#hero">X戰警</a></li>
+                            <li><a href="#x">其他商品</a></li> 
+                        </ul>
+                    </details>
+                </li>
+                <!-- <li><a href="">促銷活動</a></li> -->
+                <li>
+                    <details>
+                        <summary>最新活動</summary>
+                        <ul class="submenu">
+                            <li><a href="#hunter">HUNTERxHUNTER</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </ul>    
+    </aside>
+</body>
+</html>

@@ -1,0 +1,281 @@
+/* 頁面背景設定 */
+body {
+  background: url('../images/psytest/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  height: 100%; /* 確保 body 佔滿整個頁面 */
+  position: relative; /* 確保背景圖不被覆蓋 */
+}
+
+/* 頁面頭部樣式 */
+.header-background {
+  background-color: rgba(0, 0, 128, 0.7); /* 頭部區域背景顏色 */
+  padding: 5px;
+  text-align: center;
+  border-top: 5px solid #FFD700;
+  border-bottom: 5px solid #FFD700;
+  position: relative;
+  z-index: 10; /* 保證頭部背景層級高於頁面背景 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+/* 頁面標題樣式 */
+h1 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #FFD700;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  margin: 20px 0;
+}
+
+p {
+  line-height: 1.8;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 20px;
+}
+
+/* 介紹區域樣式 */
+.intro {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.intro-text {
+  line-height: 1.8;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.intro-highlight {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #FFD700;
+  margin-top: 30px;
+  text-shadow: 1px 1px 5px rgba(255, 87, 34, 0.7);
+}
+
+/* 圖片樣式 */
+.image-placeholder {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.image-placeholder img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* 問題區域樣式 */
+.question-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+
+.question-container input[type="radio"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.question-container input[type="radio"]:checked {
+  transform: scale(1.5);
+}
+
+/* 結果顯示區域 */
+.result-container {
+  display: block;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  width: 50%;
+  max-width: 700px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  margin: 40px auto;
+  color: #000;
+}
+
+#result-images img {
+  width: 250px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10%;
+}
+
+/* 雷達圖容器 */
+#radarChartContainer {
+  margin: 30px 80px;
+}
+
+/* 按鈕樣式 */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* 介紹區塊按鈕樣式 */
+.quiz-intro {
+  text-align: center;
+}
+
+.quiz-intro h2 {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.quiz-intro button {
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgb(121, 200, 125);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quiz-intro button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(53, 255, 100, 0.607);
+}
+
+/* 頁面底部樣式 */
+footer {
+  background: rgba(0, 0, 0, 0.6);
+  height: 50px;
+  padding: 0px;
+  text-align: center;
+  font-size: 15px;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  margin: 0px;
+}
+
+
+
+
+
+/*推薦商品*/
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-items {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  flex: 0 0 33.33%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background: white;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  height: 280px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #001370;
+  font-weight: bold;
+}
+
+.card-price {
+  color: #e91e1e;
+  font-weight: bold;
+}
+
+/* 預覽工具提示 */
+.tooltip {
+  position: absolute;
+  background-color: rgb(255, 255, 255,0.8);
+  padding: 10px;
+  border: 1px solid #ddd;
+  display: none;
+  z-index: 10;
+  width: 300px;
+  height: 150px;
+}
+
+/* 箭頭按鈕*/
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+.container h1{
+  color: #001370;
+  font-size: 30px;
+}
