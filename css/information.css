@@ -243,7 +243,7 @@ p {
     text-align: center;
 }
 
-.submit input[type="submit"] {
+.submit button {
     background-color: #775fb1;
     color: white;
     padding: 12px 30px;
@@ -252,7 +252,7 @@ p {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.submit input[type="submit"]:hover {
+.submit button:hover {
     background-color: #5c48a1;
     transform: scale(1.05); /*按鈕放大效果*/
 }
