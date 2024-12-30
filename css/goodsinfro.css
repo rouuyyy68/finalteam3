@@ -29,7 +29,7 @@
 
 
 .goods {
-    height: 295px;
+    height: 280px;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px;
@@ -51,8 +51,8 @@
 }
 
 .goods img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
 }
 
 .Infro {
