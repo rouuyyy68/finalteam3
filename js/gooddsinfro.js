@@ -32,7 +32,6 @@ const goodsData = [
             "images/goods-img/hunter/angel'sAutomaticNotes/angel'sAutomaticNotes2.jpg"
         ],
         description: `<p>掌握未來，贏在起點！天使的自動筆記是一項頂級占卜能力，只需提供目標的基本信息，能力即可自動生成未來的精準預測詩，清晰揭開接下來的關鍵事件與發展方向，讓您無論在商業、冒險還是生活中都能先人一步！</p>
-                        <p><strong>特點</strong></p>
                         <ul>
                           <li><strong>精準未來預測</strong>：詩句具體且準確，涵蓋重要事件與結果。</li>
                           <li><strong>自動書寫</strong>：能力全自動運作，無需耗費您的任何精力。</li>
