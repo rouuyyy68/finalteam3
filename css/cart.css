@@ -296,7 +296,7 @@ details[open] .submenu {
     text-align: center;
 }
 
-.go input[type="submit"] {
+.go button {
     background-color: #775fb1;
     color: white;
     padding: 12px 30px;
@@ -305,7 +305,7 @@ details[open] .submenu {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.go input[type="submit"]:hover {
+.go button:hover {
     background-color: #5c48a1;
     transform: scale(1.05); /*按鈕放大效果*/
 }
