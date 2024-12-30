@@ -2,9 +2,7 @@
     display: flex;
     justify-content: center;
     border: 2px solid blueviolet;
-    
     letter-spacing: 14px;
-
 }
 
 .totalgoods {
@@ -16,20 +14,9 @@
     padding: 20px; 
     justify-content: center;
 }
-
-.totalgoods {
-    width: 1200px;
-    display: grid;
-    margin-left: 400px;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 60px;
-    padding: 20px; 
-    justify-content: center;
-}
-
 
 .goods {
-    height: 280px;
+    height: 295px;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px;
@@ -51,8 +38,8 @@
 }
 
 .goods img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
 }
 
 .Infro {
