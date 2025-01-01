@@ -8,10 +8,10 @@
 .totalgoods {
     width: 1200px;
     display: grid;
-    margin-left: 400px;
     grid-template-columns: repeat(5, 1fr); 
     gap: 60px;
     padding: 20px; 
+    margin: 0 auto;
     justify-content: center;
 }
 
