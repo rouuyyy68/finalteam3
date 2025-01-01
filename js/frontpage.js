@@ -1,39 +1,39 @@
 const topElement = document.querySelector(".top"); // 選擇 .top 元素
-    const img = document.querySelector(".img");
-    let scrollDistance = 0;
-    let requestId = null;
-
-    function updateTopClipPath() {
-        // 設置 clip-path 動畫效果
-        const clipPathValue = `polygon(0 0, 100% 0%, 100% ${(scrollDistance <= 600) ? 100 - ((scrollDistance / 600) * 60) : 75}%, 0 100%)`;
-        topElement.style.clipPath = clipPathValue;
-
-        // 設置圖片縮放效果
-        const scaleValue = 1 + ((scrollDistance / 600) * 1);
-        img.style.transform = `scale(${scaleValue})`;
-
-        // 可選：設置透明度效果
-        const opacityValue = (scrollDistance / 600);
-    }
-
-    function scrollHandler(event) {
-        // 滾動事件處理
-        if (event.deltaY < 0) {
-            scrollDistance = Math.max(0, scrollDistance + event.deltaY);
-        } else {
-            scrollDistance = Math.min(600, scrollDistance + event.deltaY);
+        const img = document.querySelector(".topimg");
+        let scrollDistance = 0;
+        let requestId = null;
+    
+        function updateTopClipPath() {
+            // 設置 clip-path 動畫效果
+            const clipPathValue = `polygon(0 0, 100% 0%, 100% ${(scrollDistance <= 600) ? 100 - ((scrollDistance / 600) * 60) : 75}%, 0 100%)`;
+            topElement.style.clipPath = clipPathValue;
+    
+            // 設置圖片縮放效果
+            const scaleValue = 1 + ((scrollDistance / 600) * 1);
+            img.style.transform = `scale(${scaleValue})`;
+    
+            // 可選：設置透明度效果
+            const opacityValue = (scrollDistance / 600);
         }
-
-        // 優化：避免重複執行動畫
-        if (!requestId) {
-            requestId = window.requestAnimationFrame(() => {
-                updateTopClipPath();
-                requestId = null;
-            });
+    
+        function scrollHandler(event) {
+            // 滾動事件處理
+            if (event.deltaY < 0) {
+                scrollDistance = Math.max(0, scrollDistance + event.deltaY);
+            } else {
+                scrollDistance = Math.min(600, scrollDistance + event.deltaY);
+            }
+    
+            // 優化：避免重複執行動畫
+            if (!requestId) {
+                requestId = window.requestAnimationFrame(() => {
+                    updateTopClipPath();
+                    requestId = null;
+                });
+            }
         }
-    }
-    // 添加滾輪事件監聽器
-    window.addEventListener('wheel', scrollHandler);
+        // 添加滾輪事件監聽器
+        window.addEventListener('wheel', scrollHandler);
 
     function toggleSidebar(){
             var sidebar = document.getElementById('sidebar');
