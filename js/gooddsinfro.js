@@ -3,7 +3,9 @@ function openInfro() {
     document.getElementById('Infro').style.display = 'flex';
     showTab('description');
 }
-
+function closelr() {
+  document.getElementById('wrapper').style.display = 'none';
+}
 // 關閉彈窗
 function closeInfro() {
     document.getElementById('Infro').style.display = 'none';
