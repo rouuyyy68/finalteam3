@@ -3,94 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Team Members</title>
     <style>
         body {
             background-color: #c3b5cf;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
-
-        .teampic {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .teampic img {
-            width: 80%;
-            max-width: 600px;
-            height: auto;
-        }
-
-        .avatars {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .avatar-container {
+    
+        .team-container {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
+            gap: 30px;
+            padding: 20px;
         }
-
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+    
+        .teamback {
+            width: 100%;
+            height: 700px;
             overflow: hidden;
-            border: 2px solid #775fb1;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
         }
-
-        .avatar img {
+    
+        .teamback img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            filter: brightness(0.6);
+            transition: transform 0.3s ease, filter 0.3s ease; 
         }
 
-        .avatar-title {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #333;
+        .teamback img:hover {
+            transform: scale(1.05);
+            filter: brightness(1);
         }
 
-    </style>
+    
+        .member {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #ecd7babd;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+    
+        .member.reverse {
+            background-color: rgb(184, 178, 202);
+            flex-direction: row-reverse;
+        }
+
+        .member.reverse .member-text {
+            text-align: left;
+            margin: 0;
+        }
+    
+        .member-img img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    
+        .member-text {
+            flex: 1;
+        }
+    
+        .member-text h3 {
+            font-size: 26px;
+            color:  rgb(141, 127, 183);
+            margin-bottom: 15px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .h3-2 {
+            font-size: 26px;
+            color: #f8d6a6;
+            margin-bottom: 15px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .member-text p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: rgba(0, 0, 0, 0.349);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 5%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+</style>
 </head>
 <body>
-    <div class="teampic"><img src="../images/team.jpg" alt="ourpic" usemap="#members"></div>
-    <map name="members">
-        <area alt="陳柔臻" title="陳柔臻" coords="451,947,424,744,425,578,442,464,499,381,525,233,587,189,667,233,701,369,740,425,801,622,774,765,829,899,795,952" shape="poly">
-        <area alt="劉伊凌" title="劉伊凌" coords="823,947,844,913,780,764,810,730,813,637,795,541,783,417,784,351,799,251,844,223,921,278,941,381,957,441,976,488,1068,569,1072,699,1102,960" shape="poly">
-        <area alt="劉欣柔" title="劉欣柔" coords="1116,951,1084,692,1087,600,1087,557,982,433,967,321,985,227,1060,224,1099,324,1129,387,1170,351,1235,417,1303,523,1260,626,1375,827,1413,944" shape="poly">
-    </map>
-
-    <div class="avatars">
-        <div class="avatar-container">
-            <div class="avatar">
-                <img src="../images/m1.jpg" alt="陳柔臻">
-            </div>
-            <div class="avatar-title">陳柔臻</div>
+    <div class="team-container">
+        <div class="teamback">
+            <img src="../images/teamback.jpg" alt="Team Background">
         </div>
     
-        <div class="avatar-container">
-            <div class="avatar">
-                <img src="../images/m2.jpg" alt="劉伊凌">
+        <div class="member">
+            <div class="member-img">
+                <div class="tooltip">
+                    <img src="../images/rouxin.jpg" alt="Member 1">
+                    <span class="tooltiptext">劉欣柔</span>
+                </div>
             </div>
-            <div class="avatar-title">劉伊凌</div>
+            <div class="member-text">
+                <h3>「看劇時淚水潸然的人，隨著每個溫暖的瞬間與勇敢的選擇，心中充滿感動——The Gentle Soul。」</h3>
+                <p>我最喜歡的作品是《進擊的巨人》和《東京喰種》，每當聽到那偉大的OP旋律，心中總是忍不住開啟一場小劇場，幻想自己穿越到異世界，與金木研一同經歷奇幻冒險。那份孤獨與掙扎，讓我感同身受，彷彿自己也在那片破碎的世界中尋找著自己的意義。每一場激烈的戰鬥、每一次情感的碰撞，總是讓我熱血沸騰，又心碎不已。金木研那份內心的矛盾與掙扎，讓我深刻地感受到人性的複雜與脆弱，也讓我渴望在那樣的世界中找到屬於自己的勇氣與力量。</p>
+            </div>
         </div>
     
-        <div class="avatar-container">
-            <div class="avatar">
-                <img src="../images/m3.jpg" alt="劉欣柔">
+        <div class="member reverse">
+            <div class="member-img">
+                <div class="tooltip">
+                    <img src="../images/610.jpg" alt="Member 2">
+                    <span class="tooltiptext">劉伊凌</span>
+                </div>
             </div>
-            <div class="avatar-title">劉欣柔</div>
+            <div class="member-text">
+                <div class="h3-2">「傳說中的重刷之王，動漫時光旅行者，Hunter of Rewinds。」</div>
+                <p>我是對動畫忠誠度拉滿的資深刷劇者，喜歡在熱血和感動中輪迴。獵人刷不膩，西索致命的魅力讓人無法抗拒；進擊的巨人多次熱血重溫，里維的冷酷與強大永遠令人著迷。同時也是寶可夢玩家，熱愛遊戲，花整個下午奔走於城市中，只為抓到心儀的寶可夢！</p>
+            </div>
         </div>
-    </div>
     
-
+        <div class="member">
+            <div class="member-img">
+                <div class="tooltip">
+                    <img src="../images/rou.jpg" alt="Member 3">
+                    <span class="tooltiptext">陳柔臻</span>
+                </div>
+            </div>
+            <div class="member-text">
+                <h3>「看劇看到哭出來的人，沉浸於青春熱血與風中奔馳的感動——The passionate Dreamer。」</h3>
+                <p>我是對動畫忠誠度拉滿的資深刷劇者，喜歡在熱血和感動中輪迴。獵人刷不膩，西索致命的魅力讓人無法抗拒；進擊的巨人多次熱血重溫，里維的冷酷與強大永遠令人著迷。同時也是寶可夢玩家，熱愛遊戲，花整個下午奔走於城市中，只為抓到心儀的寶可夢！</p>
+            </div>
+        </div>
+    </div>    
 </body>
 </html>
